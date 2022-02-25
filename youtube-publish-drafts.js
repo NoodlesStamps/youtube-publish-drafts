@@ -10,7 +10,7 @@
     // ~ PUBLISH CONFIG
     // -----------------------------------------------------------------
     const MADE_FOR_KIDS = false; // true / false;
-    const VISIBILITY = 'Public'; // 'Public' / 'Private' / 'Unlisted'
+    const VISIBILITY = 'Private'; // 'Public' / 'Private' / 'Unlisted'
     // -----------------------------------------------------------------
     // ~ SORT PLAYLIST CONFIG
     // -----------------------------------------------------------------
@@ -100,6 +100,7 @@
     const DRAFT_MODAL_SELECTOR = '.style-scope.ytcp-uploads-dialog';
     const DRAFT_BUTTON_SELECTOR = '.edit-draft-button';
     const MADE_FOR_KIDS_SELECTOR = '#made-for-kids-group';
+    const VIDEO_MADE_FOR_KIDS_NOT_MFK = '#made-for-kids-group';
     const RADIO_BUTTON_SELECTOR = 'tp-yt-paper-radio-button';
     const VISIBILITY_STEPPER_SELECTOR = '#step-badge-3';
     const VISIBILITY_PAPER_BUTTONS_SELECTOR = 'tp-yt-paper-radio-group';
@@ -244,7 +245,11 @@
             const visibility = await draft.goToVisibility();
             await visibility.setVisibility();
             const dialog = await visibility.save();
-            await dialog.close();
+　　　　　　// await dialog.close();
+
+
+
+
             await sleep(100);
         }
     }
